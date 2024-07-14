@@ -15,7 +15,7 @@ public class DataProviders {
 	@DataProvider(name = "Data")
 	public String[][] getAllData() throws Exception {
 
-		String filePath = ("E:\\RestAssuredProject\\PetStoreAPIAutomation\\TestData\\TestDataSheet.xlsx");
+		String filePath = ("./TestData/TestDataSheet.xlsx");
 		ExcellData excell = new ExcellData(filePath);
 
 		int rowCount = excell.getRowCount("TestData");
@@ -44,7 +44,7 @@ public class DataProviders {
 
 	@DataProvider(name = "userNames")
 	public String[] getUserNames() throws Exception {
-		String filePath = ("E:\\RestAssuredProject\\PetStoreAPIAutomation\\TestData\\TestDataSheet.xlsx");
+		String filePath = ("./TestData/TestDataSheet.xlsx");
 		ExcellData excell = new ExcellData(filePath);
 		int rowNum = excell.getRowCount("TestData");
 		String apiData[] = new String[rowNum];

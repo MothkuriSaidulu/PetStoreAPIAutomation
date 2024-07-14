@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,6 +109,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="api.test.Test_01_UserTests" class="method navigator-link" hash-for-method="testPostUser">testPostUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="api.test.Test_01_UserTests" class="method navigator-link" hash-for-method="updateUserDetails">updateUserDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,6 +146,13 @@
                   <a name="testPostUser">
                   </a> <!-- testPostUser -->
                   <span class="method-name">testPostUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserDetails">
+                  </a> <!-- updateUserDetails -->
+                  <span class="method-name">updateUserDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,15 +209,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testPostUser')
 data.setCell(0, 2, 'api.test.Test_01_UserTests')
-data.setCell(0, 3, 5428);
+data.setCell(0, 3, 3460);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getTestUser')
+data.setCell(1, 1, 'updateUserDetails')
 data.setCell(1, 2, 'api.test.Test_01_UserTests')
-data.setCell(1, 3, 1666);
+data.setCell(1, 3, 2560);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'getTestUser')
+data.setCell(2, 2, 'api.test.Test_01_UserTests')
+data.setCell(2, 3, 1790);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -243,11 +259,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testPostUser</span>
-                <span class="method-start">600 ms</span>
+                <span class="method-start">191 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTestUser</span>
-                <span class="method-start">6031 ms</span>
+                <span class="method-start">3655 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserDetails</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
