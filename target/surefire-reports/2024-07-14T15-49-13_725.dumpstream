@@ -1,4 +1,4 @@
-# Created at 2024-07-13T19:25:32.413
+# Created at 2024-07-14T15:49:13.919
 Boot Manifest-JAR contains absolute paths in classpath 'E:\RestAssuredProject\PetStoreAPIAutomation\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

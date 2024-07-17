@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-14T10:34:55 IST" name="Default suite" finished-at="2024-07-14T10:34:55 IST" duration-ms="623">
+  <suite started-at="2024-07-15T15:23:10 IST" name="Default suite" finished-at="2024-07-15T15:23:13 IST" duration-ms="3077">
     <groups>
     </groups>
-    <test started-at="2024-07-14T10:34:55 IST" name="Default test" finished-at="2024-07-14T10:34:55 IST" duration-ms="623">
-      <class name="Excelutilities.ExcellWrite">
-        <test-method signature="named()[pri:0, instance:Excelutilities.ExcellWrite@645aa696]" started-at="2024-07-14T10:34:55 IST" name="named" finished-at="2024-07-14T10:34:55 IST" duration-ms="589" status="PASS">
+    <test started-at="2024-07-15T15:23:10 IST" name="Default test" finished-at="2024-07-15T15:23:13 IST" duration-ms="3077">
+      <class name="api.test.Test_04_TestWithExcellData">
+        <test-method signature="createUserDetails()[pri:0, instance:api.test.Test_04_TestWithExcellData@5e2c3d18]" started-at="2024-07-15T15:23:10 IST" name="createUserDetails" finished-at="2024-07-15T15:23:13 IST" duration-ms="3051" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- named -->
-      </class> <!-- Excelutilities.ExcellWrite -->
+        </test-method> <!-- createUserDetails -->
+      </class> <!-- api.test.Test_04_TestWithExcellData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

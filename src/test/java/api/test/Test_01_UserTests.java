@@ -50,6 +50,11 @@ public class Test_01_UserTests {
 	 */
 	@Test(priority = 1)
 	public void testPostUser() {
+		System.out.print(" ");
+
+		System.out.print(" ");
+		System.err.println("********** Post user request details started **********");
+
 
 //		logger.info(" ******* Create Users ******* ");
 
@@ -61,6 +66,7 @@ public class Test_01_UserTests {
 		Assert.assertEquals(response.getStatusCode(), 200);
 //		logger.info(" *******  Users Created ******* ");
 
+		System.err.println("********** Post user request details Ended ********** ");
 	}
 
 	/*
@@ -69,42 +75,30 @@ public class Test_01_UserTests {
 
 	@Test(priority = 2)
 	public void getTestUser() {
-//		logger.info(" ******* Getting Users details ******* ");
+		System.out.print(" ");
 
+		System.err.println("********** Get user request details started **********");
 		Response response = UserEndPoints.getUserDetails(this.userPayload.getUsername());
 		response.then().log().all();
 		Assert.assertEquals(response.getStatusCode(), 200);
+
+		System.err.println("********** Get user request details Ended **********");
+
 	}
 
 	/*
 	 * Lets update some data in user details
 	 */
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	public void updateUserDetails() {
-//		logger.info(" ******* Updating Users ******* ");
+		System.out.print(" ");
+		System.err.println("********** PUT Request Started  **********");
 
-		String usn = this.userPayload.getUsername();
-		String FFName = this.userPayload.getFirstName();
-		String LName = this.userPayload.getFirstName();
 
-		System.out.println("User name : " + usn);
-		System.out.println("1st First name : " + FFName);
-		System.out.println("1st Last name : " + FFName);
-
-		faker = new Faker();
 		userPayload.setFirstName(faker.name().firstName());
 		userPayload.setLastName(faker.name().lastName());
 
-		String secondFirstName = userPayload.getFirstName();
-		String secondLastName = userPayload.getLastName();
-
-		System.out.println(" second First Name : " + secondFirstName);
-		System.out.println("second Last Name" + secondLastName);
-//		String usn = this.userPayload.getUsername();
-		System.out.println("User name : " + usn);
-
 		Response reafterUpdate = UserEndPoints.updateUserDetails(this.userPayload.getUsername(), userPayload);
-		System.out.println(this.userPayload.getUsername());
 
 		reafterUpdate.then().log().body();
 
@@ -121,11 +115,15 @@ public class Test_01_UserTests {
 		getResponse.then().log().all();
 		Assert.assertEquals(getResponse.getStatusCode(), 200);
 
+		System.err.println("********** PUT Request Ended  **********");
+
 //		logger.info(" ******* User Details Updated ******* ");
 
 	}
 
 	public void deleteUser() {
+		System.out.print(" ");
+
 //		logger.info(" ******* Deleting Users Details******* ");
 
 		Response response = UserEndPoints.deleteUserDetails(this.userPayload.getUsername());

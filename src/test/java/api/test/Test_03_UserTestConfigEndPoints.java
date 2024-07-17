@@ -37,7 +37,7 @@ public class Test_03_UserTestConfigEndPoints {
 
 	}
 
-//	@Test(priority = 1)
+	@Test(priority = 1,dataProvider = "userNames", dataProviderClass = DataProviders.class)
 	public void getUserDetails()
 	{
 		Response getUserResp = EndPointsFromConfig.getUserDetails(this.userPayload.getUsername());
