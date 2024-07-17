@@ -1,5 +1,6 @@
 package api.utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -8,23 +9,24 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-public class ExcellData {
+public class ReadeExcellData {
 
-	public FileInputStream fileInput;
-	public XSSFWorkbook workBook;
-	public XSSFSheet sheet;
-	public XSSFRow row;
-	public XSSFCell cell;
+	public static FileInputStream fileInput;
+	public static XSSFWorkbook workBook;
+	public static XSSFSheet sheet;
+	public static XSSFRow row;
+	public static XSSFCell cell;
 
-	String filePath;
+	public static File filePath;
+	public static String rootPath = System.getProperty("user.dir");
 
-	public ExcellData(String filePath) {
-		this.filePath = filePath;
-	}
+//	public ReadeExcellData(String filePath) {
+//		this.filePath = filePath;
+//	}
 
-	public int getRowCount(String sheetName) throws Exception {
+	public static int getRowCount(String sheetName) throws Exception {
 
-//		filePath = new File(rootPath + ".\\TestData\\TestDataSheet.xlsx");St
+		filePath = new File(rootPath + ".\\TestData\\TestDataSheet.xlsx");
 		fileInput = new FileInputStream(filePath);
 		workBook = new XSSFWorkbook(fileInput);
 		sheet = workBook.getSheet(sheetName);
@@ -34,7 +36,7 @@ public class ExcellData {
 		return rowCount;
 	}
 
-	public int getColumnCount(String sheetName, int rowNumber) throws Exception {
+	public static int getColumnCount(String sheetName, int rowNumber) throws Exception {
 		fileInput = new FileInputStream(filePath);
 		workBook = new XSSFWorkbook(fileInput);
 		sheet = workBook.getSheet(sheetName);
@@ -46,12 +48,12 @@ public class ExcellData {
 
 	}
 
-	public String getCellData(String sheetName, int rowNum, int colNum) throws Exception {
+	public static String getCellData(String sheetName, int rowNum, int colname) throws Exception {
 		fileInput = new FileInputStream(filePath);
 		workBook = new XSSFWorkbook(fileInput);
 		sheet = workBook.getSheet(sheetName);
 		row = sheet.getRow(rowNum);
-		cell = row.getCell(colNum);
+		cell = row.getCell(colname);
 
 		DataFormatter formater = new DataFormatter();
 
@@ -73,6 +75,13 @@ public class ExcellData {
 		workBook.close();
 		fileInput.close();
 		return data;
+	}
+
+	@Test
+	public static void testData() 
+	{
+//		getCellData("ReadAndWrite", "TC_001", "API_URL");
+
 	}
 
 }

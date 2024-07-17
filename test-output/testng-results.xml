@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-14T15:48:47 IST" name="Default suite" finished-at="2024-07-14T15:48:58 IST" duration-ms="10284">
+  <suite started-at="2024-07-15T15:23:10 IST" name="Default suite" finished-at="2024-07-15T15:23:13 IST" duration-ms="3077">
     <groups>
     </groups>
-    <test started-at="2024-07-14T15:48:47 IST" name="Default test" finished-at="2024-07-14T15:48:58 IST" duration-ms="10284">
-      <class name="api.test.Test_01_UserTests">
-        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.Test_01_UserTests@72bc6553]" started-at="2024-07-14T15:48:47 IST" name="setupData" finished-at="2024-07-14T15:48:47 IST" duration-ms="215" status="PASS">
+    <test started-at="2024-07-15T15:23:10 IST" name="Default test" finished-at="2024-07-15T15:23:13 IST" duration-ms="3077">
+      <class name="api.test.Test_04_TestWithExcellData">
+        <test-method signature="createUserDetails()[pri:0, instance:api.test.Test_04_TestWithExcellData@5e2c3d18]" started-at="2024-07-15T15:23:10 IST" name="createUserDetails" finished-at="2024-07-15T15:23:13 IST" duration-ms="3051" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupData -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.Test_01_UserTests@72bc6553]" started-at="2024-07-14T15:48:47 IST" name="testPostUser" finished-at="2024-07-14T15:48:52 IST" duration-ms="4852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPostUser -->
-        <test-method signature="getTestUser()[pri:2, instance:api.test.Test_01_UserTests@72bc6553]" started-at="2024-07-14T15:48:52 IST" name="getTestUser" finished-at="2024-07-14T15:48:54 IST" duration-ms="1833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestUser -->
-        <test-method signature="updateUserDetails()[pri:3, instance:api.test.Test_01_UserTests@72bc6553]" started-at="2024-07-14T15:48:54 IST" name="updateUserDetails" finished-at="2024-07-14T15:48:58 IST" duration-ms="3331" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateUserDetails -->
-      </class> <!-- api.test.Test_01_UserTests -->
+        </test-method> <!-- createUserDetails -->
+      </class> <!-- api.test.Test_04_TestWithExcellData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

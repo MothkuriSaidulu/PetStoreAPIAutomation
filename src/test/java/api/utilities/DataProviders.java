@@ -13,13 +13,13 @@ public class DataProviders {
 	 * This Method will get all data from Excell sheet
 	 */
 	@DataProvider(name = "Data")
-	public String[][] getAllData() throws Exception {
+	public static String[][] getAllData() throws Exception {
 
-		String filePath = ("./TestData/TestDataSheet.xlsx");
-		ExcellData excell = new ExcellData(filePath);
+//		String filePath = ("./TestData/TestDataSheet.xlsx");
+//		ReadeExcellData excell = new ReadeExcellData();
 
-		int rowCount = excell.getRowCount("TestData");
-		int colCount = excell.getColumnCount("TestData", 1);
+		int rowCount = ReadeExcellData.getRowCount("TestData");
+		int colCount = ReadeExcellData.getColumnCount("TestData", 1);
 
 		/*
 		 * ceate the two dimentional array to story excell sheet
@@ -29,7 +29,7 @@ public class DataProviders {
 		for (int i = 1; i <= rowCount; i++) {
 
 			for (int j = 0; j < colCount; j++) {
-				apiData[i - 1][j] = excell.getCellData("TestData", i, j);
+				apiData[i - 1][j] = ReadeExcellData.getCellData("TestData", i, j);
 
 			}
 		}
@@ -44,13 +44,14 @@ public class DataProviders {
 
 	@DataProvider(name = "userNames")
 	public String[] getUserNames() throws Exception {
-		String filePath = ("./TestData/TestDataSheet.xlsx");
-		ExcellData excell = new ExcellData(filePath);
-		int rowNum = excell.getRowCount("TestData");
+//		String filePath = ("./TestData/TestDataSheet.xlsx");
+//		ReadeExcellData excell = new ReadeExcellData();
+		
+		int rowNum = ReadeExcellData.getRowCount("TestData");
 		String apiData[] = new String[rowNum];
 
 		for (int i = 0; i <= rowNum; i++) {
-			apiData[i - 1] = excell.getCellData("TestData", i, 1);
+			apiData[i - 1] = ReadeExcellData.getCellData("TestData", i, 1);
 
 		}
 		return apiData;

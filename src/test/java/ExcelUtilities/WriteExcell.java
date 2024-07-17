@@ -1,16 +1,17 @@
-package Excelutilities;
+package ExcelUtilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-public class ExcellWrite {
+public class WriteExcell {
 
 	public static FileInputStream fis;
 	public static XSSFWorkbook workbook;
@@ -38,7 +39,7 @@ public class ExcellWrite {
 			 * 3. Get the Count of No of physical rows in that sheet. 
 		    * 4. Get the No Of Columns that row. 
 			 */
-			fis = new FileInputStream("./TestData/TestDataSheet.xlsx");
+			fis = new FileInputStream(".\\TestData\\TestDataSheet.xlsx");
 			workbook = new XSSFWorkbook(fis);
 			int noOFsheet = workbook.getNumberOfSheets();
 
@@ -109,10 +110,10 @@ public class ExcellWrite {
 			 */
 			
 			System.out.println(" Value   " + value);
-			sheet.getRow(expectedRowNumber).getCell(expectedColumnNumber).setCellValue(value);
+			sheet.getRow(expectedRowNumber).getCell(expectedColumnNumber).setCellValue(value); //.setCellValue(value);
 			fis.close();
 
-			FileOutputStream fileOutputStream = new FileOutputStream("./TestData/TestDataSheet.xlsx");
+			FileOutputStream fileOutputStream = new FileOutputStream(".\\TestData\\TestDataSheet.xlsx");
 
 			workbook.write(fileOutputStream);
 
@@ -126,9 +127,9 @@ public class ExcellWrite {
 
 	}
 
-	@Test
+//	@Test
 	public void named() {
-		writeDataIntoCell("WriteSheet", "TC01", "LastName", "Saida");
+		writeDataIntoCell("ReadAndWrite", "TC_001", "Responce", "Saida");
 
 	}
 
